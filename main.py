@@ -72,7 +72,7 @@ async def giverole(ctx, member : discord.Member, role : discord.Role):
 async def avatar(ctx, *,  user : discord.Member=None):
     userAvatarUrl = user.avatar.url
     embedav = discord.Embed(title="Here is their avatar:", description="***---***", color=0xffffff)
-    embedav.set_.image(url=f'{userAvatarUrl}')
+    embedav.set_image(url=f'{userAvatarUrl}')
     await ctx.respond(embed=embedav)
 
 #library
