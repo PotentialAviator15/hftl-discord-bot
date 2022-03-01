@@ -12,7 +12,7 @@ FounderAdminRole=836094933785903104
 regularAdminRole=836098165210873856
 developerRole=853327055394963516
 
-theServerIds = [836091554316681296]
+theServerIds = [836091554316681296, 844948823289364500]
 
 @client.event
 async def on_ready():
