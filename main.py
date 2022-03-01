@@ -71,7 +71,7 @@ async def giverole(ctx, member : discord.Member, role : discord.Role):
 @client.slash_command(guild_ids=theServerIds)
 async def avatar(ctx, *,  user : discord.Member=None):
     userAvatarUrl = user.avatar.url
-    embedav = discord.Embed(title="Here is their avatar:", Description="lol", color=0xffffff)
+    embedav = discord.Embed(title="Here is their avatar:", description="***---***", color=0xffffff)
     embedav.set_.image(url=f'{userAvatarUrl}')
     await ctx.respond(embed=embedav)
 
