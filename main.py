@@ -48,7 +48,13 @@ async def on_command_error(ctx, error):
     if isinstance(error, CommandNotFound):
       await ctx.send(":x: **I couldn't find that command!**")
     if isinstance(error, MissingRequiredArgument):
-      await ctx.send("**You forgot to specify your command!**")
+      await ctx.send("**You forgot to specify parameters for your command!**")
+
+@client.slash_command(aliases=['wipeclean', 'purge'])
+@commands.has_role("Staff")
+async def clear(ctx, amount=5):
+   await ctx.channel.purge(limit=amount)
+   await ctx.respond("**Messages Purged!**", ephemeral=True)
 
 @client.slash_command(guild_ids=theServerIds)
 @commands.has_permissions(ban_members=True)
